@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — Simple Auth Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="panel">
+    <h1 id="dash-title">Dashboard</h1>
+    <p id="dash-welcome" class="lead">Protected content — only visible after login.</p>
+
+    <div class="card">
+      <p><strong>Note:</strong> This is a client-side demo for learning. Do not use for production authentication.</p>
+      <p id="user-info"></p>
+    </div>
+
+    <div class="row">
+      <button id="logout" class="btn">Sign out</button>
+      <a class="muted" href="index.html">Back to login</a>
+    </div>
+  </main>
+
+  <script src="auth.js" defer></script>
+</body>
+</html>

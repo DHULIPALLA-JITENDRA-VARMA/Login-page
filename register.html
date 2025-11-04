@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register — Simple Auth Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="panel">
+    <h1>Create account</h1>
+    <p class="lead">Register a new user (demo only — data stored locally in your browser).</p>
+
+    <form id="register-form" class="form">
+      <label for="reg-user">Username</label>
+      <input id="reg-user" name="user" type="text" required autocomplete="username" maxlength="50">
+
+      <label for="reg-pass">Password</label>
+      <input id="reg-pass" name="password" type="password" required autocomplete="new-password" minlength="6">
+
+      <label for="reg-pass2">Repeat password</label>
+      <input id="reg-pass2" name="password2" type="password" required autocomplete="new-password" minlength="6">
+
+      <div class="row">
+        <button type="submit" class="btn">Register</button>
+        <a class="muted" href="index.html">Back to login</a>
+      </div>
+
+      <p id="reg-msg" class="msg"></p>
+    </form>
+  </main>
+
+  <script src="auth.js" defer></script>
+</body>
+</html>

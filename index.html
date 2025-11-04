@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Simple Auth Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="auth-layout">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Welcome back</h1>
+        <p class="lead">Sign in to continue to your secure dashboard.</p>
+        <ul class="features">
+          <li>Secure sessions (demo)</li>
+          <li>Local-only demo — no server required</li>
+          <li>Lightweight, privacy-friendly</li>
+        </ul>
+      </div>
+      <svg class="hero-blob" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g transform="translate(300,300)">
+          <path d="M120,-150C160,-120,190,-80,200,-30C210,20,200,70,170,110C140,150,90,180,40,200C-10,220,-60,230,-100,210C-140,190,-170,140,-190,90C-210,40,-220,-20,-200,-70C-180,-120,-140,-160,-90,-180C-40,-200,20,-200,70,-180C120,-160,80,-180,120,-150Z" fill="#2b7a78" fill-opacity="0.14"/>
+        </g>
+      </svg>
+    </section>
+
+    <section class="card">
+      <form id="login-form" class="login-form" novalidate>
+        <div class="brand-row">
+          <h2>Sign in</h2>
+          <a class="muted small" href="register.html">Create account</a>
+        </div>
+
+        <label class="field">
+          <span class="label">Username or Email</span>
+          <input id="login-user" name="user" type="text" required autocomplete="username" placeholder="you@example.com">
+        </label>
+
+        <label class="field">
+          <span class="label">Password</span>
+          <div class="password-wrap">
+            <input id="login-pass" name="password" type="password" required autocomplete="current-password" placeholder="Enter your password">
+            <button type="button" id="toggle-pass" class="icon-btn" aria-label="Show password">👁️</button>
+          </div>
+          <div id="pw-strength" class="pw-strength" aria-hidden="true">
+            <div class="bar"></div>
+            <small class="pw-text"></small>
+          </div>
+        </label>
+
+        <div class="controls-row">
+          <label class="remember"><input id="remember" type="checkbox"> Remember me</label>
+          <a class="muted small" href="#">Forgot password?</a>
+        </div>
+
+        <button id="sign-in" type="submit" class="btn primary">Sign In</button>
+
+        <div class="or"><span>or</span></div>
+        <div class="socials">
+          <button class="btn social google" aria-label="Sign in with Google">G</button>
+          <button class="btn social github" aria-label="Sign in with GitHub">GH</button>
+          <button class="btn social twitter" aria-label="Sign in with Twitter">T</button>
+        </div>
+
+        <p id="login-msg" class="msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="auth.js" defer></script>
+</body>
+</html>
